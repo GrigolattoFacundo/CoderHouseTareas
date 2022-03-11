@@ -5,9 +5,16 @@ using UnityEngine;
 public class ShootingSystem : MonoBehaviour
 {
     public GameObject shell;
+    public Transform barrelPosition;
 
-    void Shoot(Vector3 CannonPosition)
+    private void Update() => Shoot();
+    
+    void Shoot()
     {
-        Instantiate(shell, CannonPosition, Quaternion.identity);
-    } 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(shell, barrelPosition.position, Quaternion.identity);
+        }
+    }
+
 }

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Shell : MonoBehaviour
 {
-    private const int Velocity = 1;
-    private Vector3 ShellVelocity;
-    
+    public float speed;
+    public Vector3 shellDirection;
     void Update()
     {
-        ShellVelocity += new Vector3(0, 0, Velocity);
+        transform.position += shellDirection * speed * Time.deltaTime; 
     }
 }
