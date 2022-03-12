@@ -24,7 +24,7 @@ public class Tiger : MonoBehaviour
         scale = new Vector3(1, 1, 1);
         speedX = 0;
         speedY = 0;
-        speedZ = 0.05f;
+        speedZ = 0;
     }
 
     void Update()

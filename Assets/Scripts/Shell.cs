@@ -6,7 +6,9 @@ public class Shell : MonoBehaviour
 {
     public float speed;
     public Vector3 shellDirection;
-    void Update()
+    void Update() => Shoot();
+
+    void Shoot()
     {
         transform.position += shellDirection * speed * Time.deltaTime; 
     }
