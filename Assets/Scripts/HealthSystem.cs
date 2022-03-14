@@ -12,7 +12,6 @@ public class HealthSystem : MonoBehaviour
     private void Start()
     {
         t = FindObjectOfType<Tiger>();
-       
     }
 
     private void Update()
@@ -21,36 +20,4 @@ public class HealthSystem : MonoBehaviour
         transform.localScale = healthBar;
         healthBar = new Vector3(X, Y, t.health / 100);
     }
-
-/*public class ObjectSpawner : MonoBehaviour
-{
-    // Tiempo en segundos
-    private float tiempoParaAccion = 3;
-    private float tiempoActual = 0;
-
-    private int printeosQueQuedan = 3;
-
-    private bool relojCorriendo = true;
-
-    private void Update()
-    {
-        if (relojCorriendo)
-        {
-            tiempoActual += Time.deltaTime;
-
-            if (tiempoActual >= tiempoParaAccion)
-            {
-                if (printeosQueQuedan > 0)
-                {
-                    tiempoActual = 0;
-                    Debug.Log("Hola como estas loco");
-                    printeosQueQuedan--;
-                }
-                else
-                {
-                    relojCorriendo = false;
-                }
-            }
-        }
-    }*/
 }
