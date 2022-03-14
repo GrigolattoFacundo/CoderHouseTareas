@@ -15,11 +15,6 @@ public class Shell : MonoBehaviour
     }
     void Update()
     {
-        Shoot();
-    }
-
-    void Shoot()
-    {
-        transform.position += shellDirection * speed * Time.deltaTime; 
+        transform.position += shellDirection * speed * Time.deltaTime;
     }
 }
