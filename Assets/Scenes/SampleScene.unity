@@ -431,11 +431,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794674544}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.5, y: 2.439, z: 11.94}
+  m_LocalPosition: {x: 1.2656941, y: 0.46731877, z: 4.4139924}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1929336502}
-  m_RootOrder: 30
+  m_Father: {fileID: 930838966}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &794674546
 MonoBehaviour:
@@ -450,6 +450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shell: {fileID: 4496806488001008732, guid: fdb4f21dbbefe1e43a9cde71bee32165, type: 3}
+  barrelPosition: {fileID: 794674545}
 --- !u!1001 &882895055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,6 +508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06f257a736a63174d966167a952d83f5, type: 3}
+--- !u!4 &930838966 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7940306847455457151, guid: 06f257a736a63174d966167a952d83f5, type: 3}
+  m_PrefabInstance: {fileID: 882895055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,11 +829,6 @@ MonoBehaviour:
   health: 0
   damageTaken: 0
   healingTaken: 0
---- !u!4 &1929336502 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 06f257a736a63174d966167a952d83f5, type: 3}
-  m_PrefabInstance: {fileID: 882895055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2071027961
 GameObject:
   m_ObjectHideFlags: 0
