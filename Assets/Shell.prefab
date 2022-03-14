@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8828984802102847914}
-  - component: {fileID: -6843109510706451498}
+  - component: {fileID: 7448878898133683241}
   m_Layer: 0
   m_Name: Shell
   m_TagString: Untagged
@@ -130,7 +130,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-6843109510706451498
+--- !u!114 &7448878898133683241
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   shellDirection: {x: 0, y: 0, z: 1}
+  shellDamage: 0
+  cannonCaliber: 0.88
 --- !u!1 &5198165170412843202
 GameObject:
   m_ObjectHideFlags: 0

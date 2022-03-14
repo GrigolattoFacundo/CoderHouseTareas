@@ -5,8 +5,18 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     public float speed;
-    public Vector3 shellDirection;
-    void Update() => Shoot();
+    public Vector3 shellDirection; 
+    public float shellDamage;
+    public float cannonCaliber = 0.88f;
+
+    private void Start()
+    {
+        shellDamage = (speed + cannonCaliber);
+    }
+    void Update()
+    {
+        Shoot();
+    }
 
     void Shoot()
     {
