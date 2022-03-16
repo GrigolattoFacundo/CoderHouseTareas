@@ -12,7 +12,6 @@ public class HealthSystem : MonoBehaviour
     private void Start()
     {
         t = FindObjectOfType<Tiger>();
-       
     }
 
     private void Update()
