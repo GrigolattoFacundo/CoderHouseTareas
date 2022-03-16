@@ -144,6 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   shellDirection: {x: 0, y: 0, z: 1}
+  shellDamage: 0
+  cannonCaliber: 0.88
 --- !u!1 &5198165170412843202
 GameObject:
   m_ObjectHideFlags: 0

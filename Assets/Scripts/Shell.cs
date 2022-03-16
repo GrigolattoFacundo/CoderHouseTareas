@@ -10,7 +10,7 @@ public class Shell : MonoBehaviour
     public float cannonCaliber = 0.88f;
     private void Start()
     {
-        shellDamage = (speed + cannonCaliber);
+        shellDamage = (speed + cannonCaliber *100);
     }
         
    
