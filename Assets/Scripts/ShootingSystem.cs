@@ -6,13 +6,30 @@ public class ShootingSystem : MonoBehaviour
 {
     public GameObject shell;
     public Transform barrelPosition;
-  
- 
-    private void Update(){Shoot();}
-    
+    public float timer;
+    public float shootTiming;
+
+    private void Start()
+    {
+        timer = 0;
+        shootTiming = 3;
+    }
+
+    private void Update()
+    {
+        Shoot();
+        timer += Time.deltaTime;
+    }
+   
     
     void Shoot()
     {
+        if (shootTiming <= timer)
+        {
+            Instantiate(shell, barrelPosition.position, Quaternion.identity);
+            timer = 0;
+        }
+        
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(shell, barrelPosition.position, Quaternion.identity);
