@@ -9,21 +9,35 @@ public class Shell : MonoBehaviour
     public float shellDamage;
     public float cannonCaliber = 0.88f;
     public float despawnTime;
-    private float timeWhenShoot;
-
+    public float timeToDespawn;
+    public Vector3 shellScale;
+    private float currentSizeX;
+    private float currentSizeY;
+    private float currentSizeZ;
     private void Start()
     {
+        currentSizeX = cannonCaliber;
+        currentSizeY = cannonCaliber;
+        currentSizeZ = cannonCaliber;
         despawnTime = 0;
-        timeWhenShoot = 10;
+        timeToDespawn = 15;
         shellDamage = (speed + cannonCaliber *100);
     }
     void Update()
     {
         despawnTime += Time.deltaTime;
         transform.position += shellDirection * speed * Time.deltaTime;
-        if(despawnTime >= timeWhenShoot)
+        if(despawnTime >= timeToDespawn)
         {
             DespawnShell();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            currentSizeX = currentSizeX *2;
+            currentSizeY = currentSizeY *2;
+            currentSizeZ = currentSizeZ *2;
+            shellScale = new Vector3 (currentSizeX, currentSizeY, currentSizeZ);
+            transform.localScale = shellScale;
         }
     }
      void DespawnShell()
