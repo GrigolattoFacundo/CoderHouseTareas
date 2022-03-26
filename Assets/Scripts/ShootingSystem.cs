@@ -24,7 +24,7 @@ public class ShootingSystem : MonoBehaviour
     
     void Shoot()
     {
-        if (shootTiming <= timer)
+       /* if (shootTiming <= timer)
         {
             Instantiate(shell, barrelPosition.position, Quaternion.identity);
             timer = 0;
@@ -33,7 +33,7 @@ public class ShootingSystem : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(shell, barrelPosition.position, Quaternion.identity);
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.J))
         {
             for (int s = 0; s < 2; s++)

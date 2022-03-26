@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shell : MonoBehaviour
 {
     public float speed;
-    public Vector3 shellDirection; 
     public float shellDamage;
     public float cannonCaliber = 0.88f;
     public float despawnTime;
@@ -26,7 +25,7 @@ public class Shell : MonoBehaviour
     void Update()
     {
         despawnTime += Time.deltaTime;
-        transform.position += shellDirection * speed * Time.deltaTime;
+        transform.position += transform.forward * speed * Time.deltaTime;
         if(despawnTime >= timeToDespawn)
         {
             DespawnShell();

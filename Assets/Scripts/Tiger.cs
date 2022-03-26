@@ -5,36 +5,24 @@ using UnityEngine;
 public class Tiger : MonoBehaviour
 {
     Vector3 vectorTiger;
-    //public float speedX;
-    //public float speedY;
-    //public float speedZ;
-    //public Vector3 scale;
     public float health;
     private const int maxHealth = 1000;
     public int damageTaken;
     public int healingTaken;
     public float speed;
     public float rotation;
-    public Transform pivotPoint;
     void Start()
     {
         health = maxHealth;
         damageTaken = 0;
         healingTaken = 0;
-        speed = -10;
+        speed = 10;
         vectorTiger = new Vector3(0, 1, 0);
-        //scale = new Vector3(1, 1, 1);
-        //speedX = 0;
-        //speedY = 0;
-        //speedZ = 0;
     }
 
     void Update()
     {
         DrivingSystem();
-        //vectorTiger += new Vector3(speedX / 5, speedY / 5, speedZ / 5);
-        //transform.position = vectorTiger;
-        //transform.localScale = scale;
         health += healingTaken;
         health -= damageTaken;
 
@@ -55,57 +43,13 @@ public class Tiger : MonoBehaviour
         {
             healingTaken = 0;
         }
-
-        /*if(speedX > 0)
-        {
-            Debug.Log("Your current speed is " + speedX + " sideways to the right");
-        }
-
-        if (speedX < 0)
-        {
-            Debug.Log("Your current speed is " + speedX + " sideways to the left");
-        }
-        if (speedX == 0)
-        {
-            Debug.Log("You're not moving on X");
-        }
-
-
-        if (speedY > 0)
-        {
-            Debug.Log("Your current speed is " + speedY + " upwards");
-        }
-
-        if (speedY < 0)
-        {
-            Debug.Log("Your current speed is " + speedY + " downwards");
-        }
-        if (speedY == 0)
-        {
-            Debug.Log("You're not moving on Y");
-        }
-        
-        
-        if (speedZ > 0)
-        {
-            Debug.Log("Your current speed is " + speedZ + " frontwards");
-        }
-
-        if (speedZ < 0)
-        {
-            Debug.Log("Your current speed is " + speedZ + " backwards");
-        }
-        if (speedZ == 0)
-        {
-            Debug.Log("You're not moving on Z");
-        }*/
     }
     void DrivingSystem()
     {
        
-        pivotPoint.position += transform.forward * speed * Input.GetAxisRaw("Vertical") * Time.deltaTime;
+        transform.position += transform.forward * speed * Input.GetAxisRaw("Vertical") * Time.deltaTime;
 
         rotation = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
-        pivotPoint.Rotate(0, (rotation * 100), 0);
+        transform.Rotate(0, (rotation * 100), 0);
     }
 }
